@@ -37,6 +37,15 @@ body{
 }
 
 .cta{
-    width: 37%;
+    width: 20%;
+    margin-top: 95px;
+    height: 55px;
+    border: s;
+    border-radius: 10px;
+}
+
+.cta-text{
+    font-weight: 600;
+    font-size: 24px;
 }
 
