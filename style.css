@@ -3,62 +3,72 @@
   margin: 0;
 }
 
-body {
-  background-color: #060329;
+:root{
+  --primary-blue : #0e37f1;
+  --primary-pink : #fe19aa;
+  --primary-black : #060329;
 }
 
-.content {
+body {
+  background-color: var(--primary-black);
+}
+
+.intro{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: #a5a3b7;
   margin-left: 25vw;
+  margin-right: 25vw;
 }
 
-.title {
+.intro__title{
   font-family: "Secular One", sans-serif;
-  font-size: 70px;
+  font-size: 4.688rem;
   color: #ebeaf3;
   font-weight: 300;
   margin-top: 150px;
 }
 
-.role {
+.intro__role{
   font-family: "Secular One", sans-serif;
-  font-size: 38px;
+  font-size: 2.813rem;
   font-weight: 300;
   width: fit-content;
-  margin-top: 30px;
+  margin-top: 1.875rem;
+  max-width: 28vw;
+
 }
 
-.bio {
-  font-size: 16px;
-  margin-top: 30px;
+.intro__bio{
+  font-size: 1.25rem;
+  margin-top: 1.875rem;
+  max-width: 28vw;
 }
 
-.cta {
-  width: 20%;
-  margin-top: 95px;
+.intro__cta{
+  width: 25%;
+  margin-top: 5.938rem;
   height: 50px;
   border: 2px solid transparent;
   border-radius: 10px;
-  background: linear-gradient(#060329, #060329) padding-box,
-  linear-gradient(306.17deg, #0e37f1 -32.78%, #fe19aa 79.17%) border-box;
+  background: linear-gradient(var(--primary-black), var(--primary-black)) padding-box,
+  linear-gradient(306.17deg, var(--primary-blue) -32.78%, var(--primary-pink) 79.17%) border-box;
   border-radius: 10px;
 }
 
-.cta-text {
+.intro__cta-text{
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.5rem;
   line-height: 29px;
-  background: linear-gradient(306.17deg, #0e37f1 -32.78%, #fe19aa 79.17%);
+  background: linear-gradient(306.17deg, var(--primary-blue) -32.78%, var(--primary-pink) 79.17%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
 
-.buttons{
+.intro__buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
