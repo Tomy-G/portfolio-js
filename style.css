@@ -3,18 +3,26 @@
   margin: 0;
 }
 
-:root{
-  --primary-blue : #0e37f1;
-  --primary-pink : #fe19aa;
-  --primary-black : #060329;
+:root {
+  --primary-blue: #0e37f1;
+  --secondary-blue: #5B2EDB;
+  --primary-pink: #fe19aa;
+  --primary-black: #060329;
+  --bg-size: 400%;
+}
+
+@keyframes gradient-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
 }
 
 body {
   background-color: var(--primary-black);
 }
 
-.intro{
-  display: flex;
+.intro {
+  display: inline-block;
   flex-direction: column;
   justify-content: space-between;
   color: #a5a3b7;
@@ -22,55 +30,86 @@ body {
   margin-right: 25vw;
 }
 
-.intro__title{
+.intro__title {
   font-family: "Secular One", sans-serif;
   font-size: 4.688rem;
   color: #ebeaf3;
   font-weight: 300;
   margin-top: 150px;
+  display: inline-flex;
 }
 
-.intro__role{
+.intro__role {
   font-family: "Secular One", sans-serif;
   font-size: 2.813rem;
   font-weight: 300;
-  width: fit-content;
   margin-top: 1.875rem;
-  max-width: 28vw;
-
 }
 
-.intro__bio{
+.intro__bio {
   font-size: 1.25rem;
   margin-top: 1.875rem;
-  max-width: 28vw;
+  max-width: 33.375rem;
 }
 
-.intro__cta{
-  width: 25%;
+.intro__cta {
   margin-top: 5.938rem;
-  height: 50px;
   border: 2px solid transparent;
   border-radius: 10px;
-  background: linear-gradient(var(--primary-black), var(--primary-black)) padding-box,
-  linear-gradient(306.17deg, var(--primary-blue) -32.78%, var(--primary-pink) 79.17%) border-box;
+  background: linear-gradient(var(--primary-black), var(--primary-black))
+      padding-box,
+    linear-gradient(
+        90deg,
+        var(--primary-pink),
+        var(--secondary-blue),
+        var(--primary-pink)
+      )
+      0 0 / var(--bg-size) 100% border-box;
+  background-size: 200% 200%;
+  animation: gradient-bg 8s linear infinite;
   border-radius: 10px;
+  padding: 0.81rem 8.1% 0.81rem 8.1%;
 }
 
-.intro__cta-text{
+.intro__cta-text {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 29px;
-  background: linear-gradient(306.17deg, var(--primary-blue) -32.78%, var(--primary-pink) 79.17%);
+  background: linear-gradient(
+      90deg,
+      var(--primary-pink),
+      var(--secondary-blue),
+      var(--primary-pink)
+    )
+    0 0 / var(--bg-size);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-bg 8s linear infinite;
   background-clip: text;
   text-fill-color: transparent;
 }
 
-.intro__buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+.intro__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.intro__socials{
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social{
+  width: 2.875rem;
+  height: 2.875rem;
+  background-color: var(--primary-black);
+  border: 2px solid #a5a3b7;
+  border-radius: 2.875rem;
+  margin-left: 1rem;
 }
