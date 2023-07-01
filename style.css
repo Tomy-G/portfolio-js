@@ -19,6 +19,39 @@
 
 body {
   background-color: var(--primary-black);
+  height: 10000px;
+}
+
+.navbar{
+  height: 5.6875rem;
+  width: 100%;
+  background: linear-gradient(180deg, #060329 0%, rgba(6, 3, 41, 0.10) 80%, rgba(6, 3, 41, 0.10) 100%);
+  z-index: 100;
+  position: fixed;
+}
+
+.blob{
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 120vh;
+  width: 120vh;
+  overflow: hidden;
+  z-index: 0;
+}
+.blob--left{
+  left: -40vw;
+  top: -12vh;
+}
+
+.blob--right{
+  right: -30vw;
+  top: -12vh;
+}
+
+svg{
+  margin: 0;
+  padding: 0;
 }
 
 .intro {
